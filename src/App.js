@@ -3,10 +3,10 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
-import About from "./components/About";
+//import About from "./components/About";
 
 //Routing
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+//import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light"); // check dark mode is enabled or not
@@ -36,27 +36,27 @@ function App() {
   };
   return (
     <>
-      <Router>
-        {/* title is prop for Navabr */}
-        <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
-        <Alert alert={alert} />
-        <div className="container my-3">
-          <Routes>
-            <Route exact path="/about" element={<About />} />
-            <Route
+      {/* <Router> */}
+      {/* title is prop for Navabr */}
+      <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
+      <Alert alert={alert} />
+      <div className="container my-3">
+        {/* <Routes> */}
+        {/* <Route exact path="/about" element={<About />} /> */}
+        {/* <Route
               exact path="/" //use exact path bc react uses partial matching while routing
-              element={
-                <TextForm
-                  heading="Enter the text to analyze below"
-                  mode={mode}
-                  showAlert={showAlert}
-                />
-              }
-            />
-            {/* heading is prop for TextForm */}
-          </Routes>
-        </div>
-      </Router>
+              element={ */}
+        <TextForm
+          heading="Enter the text to analyze below"
+          mode={mode}
+          showAlert={showAlert}
+        />
+        {/* }
+            /> */}
+        {/* heading is prop for TextForm */}
+        {/* </Routes> */}
+      </div>
+      {/* </Router> */}
     </>
   );
 }
